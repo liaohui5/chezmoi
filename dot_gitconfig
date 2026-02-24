@@ -1,0 +1,27 @@
+[user]
+	name = secret
+	email = secretx500@qq.com
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+[init]
+	defaultBranch = main
+
+[credential]
+	helper = store
+
+[interactive]
+    diffFilter = delta --color-only
+
+[merge]
+    conflictstyle = diff3
+
+[https]
+	proxy = system
+
+[pull]
+	rebase = true
