@@ -1,6 +1,0 @@
-{
-    "diagnostics.globals": [
-        "lazyvim_docs",
-        "vim"
-    ]
-}
