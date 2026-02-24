@@ -1,0 +1,148 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "bindings": {
+      "ctrl-j": "menu::SelectNext",
+      "ctrl-k": "menu::SelectPrevious",
+    },
+  },
+  {
+    // for vim normal mode
+    "context": "VimControl && !menu",
+    "bindings": {
+      // toggle panels
+      "space space": "file_finder::Toggle",
+      "ctrl-e": "project_panel::ToggleFocus",
+      "ctrl-x": "workspace::ToggleBottomDock",
+
+      // <leader-a> -> AI
+      "space a a": "workspace::ToggleRightDock",
+
+      // <leader-b> -> tabs -> buffers
+      "shift-l": "pane::ActivateNextItem",
+      "shift-h": "pane::ActivatePreviousItem",
+      "space b d": "pane::CloseActiveItem",
+      "space b o": "workspace::CloseInactiveTabsAndPanes",
+      "space b p": "pane::TogglePinTab",
+      "space b [": ["pane::CloseItemsToTheLeft", { "close_pinned": false }],
+      "space b ]": ["pane::CloseItemsToTheRight", { "close_pinned": false }],
+      "space b shift-h": "pane::SwapItemLeft",
+      "space b shift-l": "pane::SwapItemRight",
+
+      // <leader-c> -> codeAction
+      "space c a": "editor::ToggleCodeActions",
+      // "space c d":"editor::GoToDiagnostic",
+      "space c d": "editor::Hover",
+
+      // <leader-f> -> find/search/foramt
+      "space f s": "workspace::Save",
+      "space f f": "editor::Format",
+
+      // <leader-o> -> open
+      "space o u": "editor::OpenUrl",
+
+      // <leader-q> -> quit/projects
+      "space q q": "workspace::CloseWindow",
+      "space q l": "projects::OpenRecent",
+
+      // <leader-r> -> refactor/replace
+      "space r r": "buffer_search::DeployReplace",
+      "space r n": "editor::Rename",
+
+      // <leader-s> -> search
+      "space s s": "outline::Toggle",
+      "space s shift-s": "project_symbols::Toggle",
+      "space s g": "pane::DeploySearch",
+
+      // <leader-u> -> ui
+      "space u t": "theme_selector::Toggle",
+      "space u n": "editor::ToggleLineNumbers",
+      "space u z": "editor::ToggleSoftWrap",
+
+      // toggle comment
+      "ctrl-\\": ["workspace::SendKeystrokes", "g c c"],
+
+      // scroll
+      "ctrl-d": ["workspace::SendKeystrokes", "5 j z z"],
+      "ctrl-u": ["workspace::SendKeystrokes", "5 k z z"],
+
+      // lazygit & yazi: need task.json config
+      "ctrl-g": ["task::Spawn", { "task_name": "lazygit" }],
+      "ctrl-f": ["task::Spawn", { "task_name": "yazi" }],
+    },
+  },
+  {
+    // toggle terminal in terminal
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-x": "workspace::ToggleBottomDock",
+    },
+  },
+  {
+    // for vim normal mode
+    "context": "VimControl && vim_mode == normal",
+    "bindings": {
+      "g s r": ["vim::PushChangeSurrounds", {}], // mini.surround - replace
+      "g s d": ["vim::PushDeleteSurrounds", {}], // mini.surround - delete
+    },
+  },
+  {
+    // for vim visual mode
+    "context": "VimControl && vim_mode == visual",
+    "bindings": {
+      "ctrl-\\": ["workspace::SendKeystrokes", "g c"],
+      "g s s": ["vim::PushAddSurrounds", {}], // mini.surround - add
+    },
+  },
+  {
+    // for vim insert mode
+    "context": "vim_mode == insert",
+    "bindings": {
+      "ctrl-o": "editor::ShowCompletions",
+      "ctrl-e": "editor::Cancel",
+      "ctrl-a": "assistant::InlineAssist",
+      "ctrl-h": "editor::Backtab",
+      "ctrl-l": "editor::Tab",
+    },
+  },
+  {
+    // select code suggestion
+    "context": "Editor && (showing_code_actions || showing_completions)",
+    "use_key_equivalents": true,
+    "bindings": {
+      "ctrl-k": "editor::ContextMenuPrevious",
+      "ctrl-j": "editor::ContextMenuNext",
+    },
+  },
+  {
+    // file explorer
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "space space": "file_finder::Toggle",
+      ":": "command_palette::Toggle",
+      "ctrl-e": "workspace::ToggleLeftDock",
+      "shift-a": "project_panel::NewDirectory",
+      "a": "project_panel::NewFile",
+      "o": "project_panel::OpenPermanent",
+      "r": "project_panel::Rename",
+      "x": [
+        "project_panel::Trash",
+        {
+          "skip_prompt": false,
+        },
+      ],
+      "d": "project_panel::Cut",
+      "y": "project_panel::Copy",
+      "shift-y": "workspace::CopyPath",
+      "ctrl-y": "workspace::CopyRelativePath",
+      "p": "project_panel::Paste",
+      "ctrl-enter": "project_panel::RevealInFileManager",
+    },
+  },
+]

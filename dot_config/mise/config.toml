@@ -1,0 +1,9 @@
+[tools]
+bun = "latest"
+deno = "latest"
+go = "latest"
+java = "latest"
+node = "24"
+pnpm = "latest"
+python = "3"
+uv = "latest"
