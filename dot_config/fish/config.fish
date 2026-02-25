@@ -93,7 +93,7 @@ if command_exists zellij
     source_file_if_exists "$HOME/.config/fish/zellij.fish"
 end
 
-# 这个文件会被 git 忽略, 所以可以在其中定义一些
+# 这个文件会被 chezmoi 加密, 所以可以在其中定义一些
 # 比较私密的环境变量, 比如有的命令行软件需要使用 OpenAI 的密钥
 # 那么就可以自动将 API 密钥等私密信息加载到环境变量中
 source_file_if_exists "$HOME/.config/fish/_profile.fish"
