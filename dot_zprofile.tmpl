@@ -1,0 +1,7 @@
+#!/usr/bin/env zsh
+########################################
+# store some private keys
+########################################
+
+# for cz-git
+export CZ_OPENAI_API_KEY='{{ "encrypted_dot_secrets.age" | include | decrypt | fromJson | jq ".cz_openai_api_key" | first }}'
