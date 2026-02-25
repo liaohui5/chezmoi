@@ -3,6 +3,10 @@
 #####################################################
 # 设置 homebrew 源相关命令脚本
 #####################################################
+if command_exists brew
+    append_path /usr/local/sbin
+end
+
 set -gx mirror_file_path "$HOME/.brew-mirror.fish"
 
 # 重新加载源
