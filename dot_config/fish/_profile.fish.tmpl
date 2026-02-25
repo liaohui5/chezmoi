@@ -1,2 +1,2 @@
 # for cz-git openai commit message generator
-set -gx CZ_OPENAI_API_KEY {{ "encrypted_dot_cz_openai_api_key.age" | include | decrypt }}
+set -gx CZ_OPENAI_API_KEY {{ "encrypted_dot_secrets.age" | include | decrypt | fromJson | jq ".cz_openai_api_key" | first }}
