@@ -8,8 +8,8 @@ export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
 # keybindings
-bindkey '^K' history-substring-search-up
-bindkey '^J' history-substring-search-down
+bindkey '^K' up-line-or-search
+bindkey '^J' down-line-or-search
 bindkey '^H' backward-char
 bindkey '^L' forward-char
 
