@@ -1,4 +1,7 @@
 README.md
+.oxfmtrc.json
+.oxfmtrc.jsonc
+.editorconfig
 
 {{- if eq .chezmoi.os "windows" }}
 Documents/*
