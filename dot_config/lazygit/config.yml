@@ -3,7 +3,7 @@
 # https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md
 # https://github.com/jesseduffield/lazygit/blob/master/docs/keybindings/Keybindings_zh-CN.md
 ##############################################################################################
-yaml-language-server: $schema=https://json.schemastore.org/lazygit.json
+# yaml-language-server: $schema=https://json.schemastore.org/lazygit.json
 gui:
   showListFooter: false
   showFileTree: false
@@ -18,9 +18,6 @@ git:
 reporting: "off"
 
 # 快捷键绑定:
-# keybinding:
-#   universal:
-#     quit: "<c-q>" # 退出
 customCommands:
   # 打开默认的快捷键文档
   - key: "<c-k>"
@@ -28,19 +25,19 @@ customCommands:
     context: "global"
     command: "open -u 'https://github.com/jesseduffield/lazygit/blob/master/docs/keybindings/Keybindings_zh-CN.md'"
 
-  # 集成 cz-git 命令, 快速生成提交模板
-  # 注意需要安装命令 npm i -g czg(或者: brew install czg)
+  # 集成 czg 命令, 生成符合规范的提交信息
+  # 注意需要安装命令 npm i -g czg
   # docs: https://cz-git.qbb.sh/zh/
   - key: "<c-c>"
-    description: "Generate commit use cz-git"
+    description: "Generate commit use czg"
     context: "files"
     command: "czg"
     output: terminal
 
-  # 集成 cz-git ai 命令, 使用AI快速生成提交模板
+  # 集成 czg ai 命令, 使用AI快速生成提交模板
   # 注意需要先配置请求 api 需要的相关信息
   # docs: https://cz-git.qbb.sh/zh/cli/ai
-  - key: <c-e>
+  - key: "<c-e>"
     description: "Generate commit using ai"
     command: "czg ai -N=4"
     context: "files"

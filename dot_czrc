@@ -2,7 +2,7 @@
 	"path": "cz-git",
 	"useAI": false,
 	"apiEndpoint": "https://integrate.api.nvidia.com/v1",
-	"apiModel": "deepseek-ai/deepseek-v3.2",
+	"apiModel": "qwen/qwen2.5-coder-7b-instruct",
 	"//": "api-key 使用环境变量 https://cz-git.qbb.sh/zh/recipes/openai",
 	"useEmoji": true,
 	"emojiAlign": "left",
