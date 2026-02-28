@@ -16,6 +16,9 @@ alias ...='cd ../../'
 # lsd: https://github.com/Peltoche/lsd
 safe_alias ls lsd
 
+# chezmoi: https://github.com/twpayne/chezmoi
+safe_alias zmoi chezmoi
+
 # static web server
 # https://github.com/vercel/serve
 # https://github.com/vitejs/vite
