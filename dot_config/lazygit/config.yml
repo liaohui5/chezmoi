@@ -3,19 +3,18 @@
 # https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md
 # https://github.com/jesseduffield/lazygit/blob/master/docs/keybindings/Keybindings_zh-CN.md
 ##############################################################################################
-# yaml-language-server: $schema=https://json.schemastore.org/lazygit.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/jesseduffield/lazygit/master/schema/config.json
 gui:
   showListFooter: false
-  showFileTree: false
+  showRootItemInFileTree: false
   sidePanelWidth: 0.5
   showIcons: true
   showRandomTip: false
+  border: single
 git:
   autoFetch: true
   autoRefresh: true
-  mouseevents: false
   parseEmoji: true
-reporting: "off"
 
 # 快捷键绑定:
 customCommands:
@@ -39,6 +38,6 @@ customCommands:
   # docs: https://cz-git.qbb.sh/zh/cli/ai
   - key: "<c-e>"
     description: "Generate commit using ai"
-    command: "czg ai -N=4"
+    command: "czg ai"
     context: "files"
     output: terminal

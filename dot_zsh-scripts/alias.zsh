@@ -26,7 +26,7 @@ function sws() {
     simple-http-server . -p 3000
   elif has-command miniserve; then
     miniserve . -p 3000
-  elif has-command serve ; then
+  elif has-command serve; then
     serve . -p 3000
   elif has-command vite; then
     vite . -p 3000

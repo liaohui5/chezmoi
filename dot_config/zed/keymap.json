@@ -9,8 +9,8 @@
   {
     "bindings": {
       "ctrl-j": "menu::SelectNext",
-      "ctrl-k": "menu::SelectPrevious",
-    },
+      "ctrl-k": "menu::SelectPrevious"
+    }
   },
   {
     // for vim normal mode
@@ -74,31 +74,31 @@
 
       // lazygit & yazi: need task.json config
       "ctrl-g": ["task::Spawn", { "task_name": "lazygit" }],
-      "ctrl-f": ["task::Spawn", { "task_name": "yazi" }],
-    },
+      "ctrl-f": ["task::Spawn", { "task_name": "yazi" }]
+    }
   },
   {
     // toggle terminal in terminal
     "context": "Terminal",
     "bindings": {
-      "ctrl-x": "workspace::ToggleBottomDock",
-    },
+      "ctrl-x": "workspace::ToggleBottomDock"
+    }
   },
   {
     // for vim normal mode
     "context": "VimControl && vim_mode == normal",
     "bindings": {
       "g s r": ["vim::PushChangeSurrounds", {}], // mini.surround - replace
-      "g s d": ["vim::PushDeleteSurrounds", {}], // mini.surround - delete
-    },
+      "g s d": ["vim::PushDeleteSurrounds", {}] // mini.surround - delete
+    }
   },
   {
     // for vim visual mode
     "context": "VimControl && vim_mode == visual",
     "bindings": {
       "ctrl-\\": ["workspace::SendKeystrokes", "g c"],
-      "g s s": ["vim::PushAddSurrounds", {}], // mini.surround - add
-    },
+      "g s s": ["vim::PushAddSurrounds", {}] // mini.surround - add
+    }
   },
   {
     // for vim insert mode
@@ -108,8 +108,8 @@
       "ctrl-e": "editor::Cancel",
       "ctrl-a": "assistant::InlineAssist",
       "ctrl-h": "editor::Backtab",
-      "ctrl-l": "editor::Tab",
-    },
+      "ctrl-l": "editor::Tab"
+    }
   },
   {
     // select code suggestion
@@ -117,8 +117,8 @@
     "use_key_equivalents": true,
     "bindings": {
       "ctrl-k": "editor::ContextMenuPrevious",
-      "ctrl-j": "editor::ContextMenuNext",
-    },
+      "ctrl-j": "editor::ContextMenuNext"
+    }
   },
   {
     // file explorer
@@ -134,15 +134,15 @@
       "x": [
         "project_panel::Trash",
         {
-          "skip_prompt": false,
-        },
+          "skip_prompt": false
+        }
       ],
       "d": "project_panel::Cut",
       "y": "project_panel::Copy",
       "shift-y": "workspace::CopyPath",
       "ctrl-y": "workspace::CopyRelativePath",
       "p": "project_panel::Paste",
-      "ctrl-enter": "project_panel::RevealInFileManager",
-    },
-  },
+      "ctrl-enter": "project_panel::RevealInFileManager"
+    }
+  }
 ]
