@@ -6,11 +6,12 @@
 
 # vim & nvim EDITOR
 # https://github.com/neovim/neovim
-if command_exists vim
-    set -gx EDITOR vim
+if command_exists nvim
+    set -gx EDITOR 'nvim'
+else if command_exists vim
+    set -gx EDITOR 'vim'
 else
-    set -gx EDITOR nvim
-    set -gx NVIM /usr/local/bin/nvim
+    set -gx EDITOR 'vi'
 end
 
 # rustup

@@ -5,6 +5,9 @@ set -gx LANG "en_US.UTF-8"
 set -gx LC_ALL "en_US.UTF-8"
 set -gx TERM xterm-256color
 
+# for some config files
+set -gx XDG_CONFIG_HOME "$HOME/.config"
+
 ######################################################################
 # 配置入口文件
 ######################################################################

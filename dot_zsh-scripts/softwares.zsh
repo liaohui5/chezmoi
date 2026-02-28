@@ -1,14 +1,14 @@
 #!/usr/bin/env zsh
 
-# vim & nvim EDITOR
+# nvim & vim & vi EDITOR
 # https://github.com/neovim/neovim
-if has-command 'vim'; then
+if has-command 'nvim'; then
+  export EDITOR='nvim'
+elif has-command 'vim'; then
   export EDITOR='vim'
 else
-  export EDITOR='nvim'
-  export NVIM="/usr/local/bin/nvim"
+  export EDITOR='vi'
 fi
-
 
 # zoxide
 # https://github.com/ajeetdsouza/zoxide
@@ -50,6 +50,11 @@ fi
 if [[ -f "$HOME/.cargo/bin/mise" ]]; then
   eval "$(~/.cargo/bin/mise activate zsh)"
 fi
+
+# goproxy
+if has-command 'go'; then
+  export GOPROXY="https://goproxy.cn/,https://mirrors.aliyun.com/goproxy/,https://goproxy.bj.bcebos.com,direct"
+end
 
 # uv
 # https://docs.astral.sh/uv/getting-started

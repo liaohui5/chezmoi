@@ -7,6 +7,9 @@
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
+# for some config files
+export XDG_CONFIG_HOME="$HOME/.config"
+
 # keybindings
 bindkey '^K' up-line-or-search
 bindkey '^J' down-line-or-search
