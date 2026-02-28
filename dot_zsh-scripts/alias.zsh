@@ -9,6 +9,10 @@ alias c='clear'
 # reload zshrc
 alias rc="source ${HOME}/.zshrc"
 
+# change directory
+alias ..='cd ../'
+alias ...='cd ../../'
+
 # lsd: https://github.com/Peltoche/lsd
 safe-alias 'ls' 'lsd'
 

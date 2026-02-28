@@ -9,6 +9,10 @@ alias c='clear'
 # reload config
 alias rc="source $HOME/.config/fish/config.fish"
 
+# change directory
+alias ..='cd ../'
+alias ...='cd ../../'
+
 # lsd: https://github.com/Peltoche/lsd
 safe_alias ls lsd
 
