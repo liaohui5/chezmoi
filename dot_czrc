@@ -12,6 +12,20 @@
 		"ur": "docs: update README",
 		"ch": "chore: other changes"
 	},
+ "messages": {
+    "type": "提交类型 | Select the type of change that you're committing:",
+    "scope": "提交范围 | Denote the SCOPE of this change (optional):",
+    "customScope": "自设范围 | Denote the SCOPE of this change:",
+    "subject": "变更描述 | Write a SHORT, IMPERATIVE tense description of the change:\n",
+    "body": "详细描述 | Provide a LONGER description of the change (optional). Use \"|\" to break new line:\n",
+    "breaking": "重大变更 | List any BREAKING CHANGES (optional). Use \"|\" to break new line:\n",
+    "footerPrefixesSelect": "关联建议 | Select the ISSUES type of changeList by this change (optional):",
+    "customFooterPrefix": "自设建议 | Input ISSUES prefix:",
+    "footer": "列举关联 | List any ISSUES by this change. E.g.: #31, #34:\n",
+    "generatingByAI": "智能描述 | Generating your AI commit subject...",
+    "generatedSelectByAI": "选择描述 | Select suitable subject by AI generated:",
+    "confirmCommit": "确定提交 | Are you sure you want to proceed with the commit above?"
+  },
 	"types": [
 		{
 			"value": "feat",
