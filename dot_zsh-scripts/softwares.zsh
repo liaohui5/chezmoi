@@ -54,7 +54,7 @@ fi
 # goproxy
 if has-command 'go'; then
   export GOPROXY="https://goproxy.cn/,https://mirrors.aliyun.com/goproxy/,https://goproxy.bj.bcebos.com,direct"
-end
+fi
 
 # uv
 # https://docs.astral.sh/uv/getting-started
