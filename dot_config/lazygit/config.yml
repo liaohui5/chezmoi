@@ -5,12 +5,13 @@
 ##############################################################################################
 # yaml-language-server: $schema=https://raw.githubusercontent.com/jesseduffield/lazygit/master/schema/config.json
 gui:
-  showListFooter: false
   showRootItemInFileTree: false
   sidePanelWidth: 0.5
-  showIcons: true
   showRandomTip: false
   border: single
+  showIcons: true
+  showFileIcons: true
+  commitHashLength: 6
 git:
   autoFetch: true
   autoRefresh: true
