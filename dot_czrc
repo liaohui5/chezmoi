@@ -1,9 +1,10 @@
 {
+	"//docs": "api-key 使用环境变量 https://cz-git.qbb.sh/zh/recipes/openai",
 	"path": "cz-git",
 	"useAI": false,
 	"apiEndpoint": "https://integrate.api.nvidia.com/v1",
-	"apiModel": "qwen/qwen2.5-coder-7b-instruct",
-	"//": "api-key 使用环境变量 https://cz-git.qbb.sh/zh/recipes/openai",
+	"apiModel": "moonshotai/kimi-k2-instruct",
+  "aiNumber": 6,
 	"useEmoji": true,
 	"emojiAlign": "left",
 	"alias": {

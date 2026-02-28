@@ -71,6 +71,7 @@ Shell提示符美化配置
 ## 🚀 效率工具
 
 ### [skhd/](skhd/)
+
 macOS快捷键管理（仅在macOS可用）
 
 - [skhdrc](skhd/skhdrc) - 主快捷键配置
