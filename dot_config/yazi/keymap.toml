@@ -4,35 +4,43 @@
 ######################################################################################################
 "$schema" = "https://yazi-rs.github.io/schemas/keymap.json"
 
-# 剪切文件
+# 打开 lazygit
 [[mgr.prepend_keymap]]
-on = "d"
-run = "yank --cut"
-desc = "Yank selected files (cut)"
-
-# 取消选择的剪切文件
-[[mgr.prepend_keymap]]
-on = "D"
-run = "unyank"
-desc = "Cancel the yank status"
-
-# 删除文件
-[[mgr.prepend_keymap]]
-on = "x"
-run = "remove"
-desc = "Trash selected files"
-
-# 取消选中的删除文件
-[[mgr.prepend_keymap]]
-on = "X"
-run = "remove --permanently"
-desc = "Permanently delete selected files"
+on = "<C-g>"
+run = "shell --confirm --block lazygit"
+desc = "Lazygit"
 
 # 退出, 使用默认的 q 也可以
 [[mgr.prepend_keymap]]
 on = "<C-q>"
 run = "quit"
 desc = "Exit the process"
+
+# 进入目录或打开文件
+[[mgr.prepend_keymap]]
+on   = "l"
+run  = "plugin smart-enter"
+desc = "Enter the child directory, or open the file"
+
+# 剪切文件/取消选择的剪切文件
+[[mgr.prepend_keymap]]
+on = "d"
+run = "yank --cut"
+desc = "Yank selected files (cut)"
+[[mgr.prepend_keymap]]
+on = "D"
+run = "unyank"
+desc = "Cancel the yank status"
+
+# 删除文件/ 取消选中的删除文件
+[[mgr.prepend_keymap]]
+on = "x"
+run = "remove"
+desc = "Trash selected files"
+[[mgr.prepend_keymap]]
+on = "X"
+run = "remove --permanently"
+desc = "Permanently delete selected files"
 
 # 切换标签页(和 lazyvim 保持同步)
 [[mgr.prepend_keymap]]
@@ -56,7 +64,7 @@ on = ["g", "k"]
 run = "shell 'open -u https://yazi-rs.github.io/docs/quick-start#keybindings' --confirm"
 desc = "Open keybindings docs"
 
-# 打开默认按键源码
+# 打开默认按键绑定(查看快捷键)
 [[mgr.prepend_keymap]]
 on = ["g", "<S-k>"]
 run = "shell 'open -u https://github.com/sxyazi/yazi/blob/main/yazi-config/preset/keymap-default.toml' --confirm"
@@ -68,13 +76,13 @@ on = ["?"]
 run = "help"
 desc = "Open help"
 
-# zoxide fzf 插件
+# zoxide/fzf 插件
 [[mgr.prepend_keymap]]
 on = "z"
 run = "plugin zoxide"
 desc = "Jump to a directory via zoxide"
-
 [[mgr.prepend_keymap]]
 on = "Z"
 run = "plugin fzf"
 desc = "Jump to a file/directory via fzf"
+
