@@ -1,7 +1,9 @@
 README.md
+ToDo.md
 .oxfmtrc.json
 .oxfmtrc.jsonc
 .editorconfig
+.gitignore
 
 {{- if eq .chezmoi.os "darwin" }}
   ~/.vim/.netrwhist
