@@ -6,7 +6,9 @@ ToDo.md
 .gitignore
 
 {{- if eq .chezmoi.os "darwin" }}
-  ~/.vim/.netrwhist
+~/.vim/.netrwhist
+~/.vim/plugged
+~/.vim/undo
 {{- end }}
 
 {{- if eq .chezmoi.os "windows" }}
