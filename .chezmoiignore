@@ -3,6 +3,10 @@ README.md
 .oxfmtrc.jsonc
 .editorconfig
 
+{{- if eq .chezmoi.os "darwin" }}
+  ~/.vim/.netrwhist
+{{- end }}
+
 {{- if eq .chezmoi.os "windows" }}
 Documents/*
 !Documents/*PowerShell/ # ignore a folder, except for Windows PowerShell profiles

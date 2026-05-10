@@ -9,6 +9,14 @@
 {
   // disable ai features
   // "disable_ai": true,
+  "agent": {
+    "dock": "right",
+    "default_model": {
+      "provider": "Nvidia",
+      "model": "z-ai/glm4.7",
+    },
+    "enabled": true,
+  },
   "language_models": {
     "openai_compatible": {
       "Nvidia": {
@@ -24,8 +32,8 @@
               "images": true,
               "parallel_tool_calls": false,
               "prompt_cache_key": false,
-              "chat_completions": true
-            }
+              "chat_completions": true,
+            },
           },
           {
             "name": "qwen/qwen3-coder-480b-a35b-instruct",
@@ -37,8 +45,8 @@
               "images": true,
               "parallel_tool_calls": false,
               "prompt_cache_key": false,
-              "chat_completions": true
-            }
+              "chat_completions": true,
+            },
           },
           {
             "name": "minimaxai/minimax-m2.1",
@@ -50,8 +58,8 @@
               "images": true,
               "parallel_tool_calls": false,
               "prompt_cache_key": false,
-              "chat_completions": true
-            }
+              "chat_completions": true,
+            },
           },
           {
             "name": "deepseek-ai/deepseek-v3.2",
@@ -63,8 +71,8 @@
               "images": true,
               "parallel_tool_calls": false,
               "prompt_cache_key": false,
-              "chat_completions": true
-            }
+              "chat_completions": true,
+            },
           },
           {
             "name": "qwen/qwen3-next-80b-a3b-thinking",
@@ -76,26 +84,30 @@
               "images": true,
               "parallel_tool_calls": false,
               "prompt_cache_key": false,
-              "chat_completions": true
-            }
-          }
-        ]
-      }
-    }
-  },
-  "agent": {
-    "default_model": {
-      "provider": "Nvidia",
-      "model": "z-ai/glm4.7"
+              "chat_completions": true,
+            },
+          },
+        ],
+      },
     },
-    "enabled": true
   },
   "edit_predictions": {
     "provider": "none",
     "mode": "subtle",
-    "disabled_globs": ["**/.env*", "**/*.pem", "**/*.key", "**/*.cert", "**/*.crt", "**/secrets.yml"]
+    "disabled_globs": ["**/.env*", "**/*.pem", "**/*.key", "**/*.cert", "**/*.crt", "**/secrets.yml"],
   },
   "edit_predictions_disabled_in": ["comment"],
+
+  // panels
+  "project_panel": {
+    "dock": "left",
+  },
+  "outline_panel": {
+    "dock": "left",
+  },
+  "git_panel": {
+    "dock": "left",
+  },
 
   // auto save & auto format
   "format_on_save": "off",
@@ -112,15 +124,15 @@
   "git": {
     "git_gutter": "tracked_files",
     "inline_blame": {
-      "enabled": false
-    }
+      "enabled": false,
+    },
   },
 
   // vim
   "vim_mode": true,
   "vim": {
     "use_system_clipboard": "always",
-    "use_smartcase_find": true
+    "use_smartcase_find": true,
   },
 
   // font
@@ -137,40 +149,39 @@
   // tab bar
   "tab_bar": {
     "show": true,
-    "show_nav_history_buttons": false
+    "show_nav_history_buttons": false,
   },
 
   // tabs
   "tabs": {
     "file_icons": true,
-    "git_status": true
+    "git_status": true,
   },
 
   // scrollbar
   "scrollbar": {
-    "show": "never"
+    "show": "never",
   },
 
   // status bar
   "toolbar": {
     "breadcrumbs": false,
-    "quick_actions": false
+    "quick_actions": false,
   },
 
   // title bar
   "title_bar": {
-    "show_branch_icon": true,
     "show_branch_name": true,
     "show_project_items": true,
     "show_onboarding_banner": true,
     "show_user_picture": true,
     "show_sign_in": true,
-    "show_menus": true
+    "show_menus": true,
   },
 
   // search
   "search": {
-    "regex": true
+    "regex": true,
   },
 
   // search files
@@ -178,24 +189,23 @@
     "file_icons": true,
     "modal_max_width": "large",
     "skip_focus_for_active_in_search": true,
-    "git_status": true,
-    "include_ignored": "all"
+    "include_ignored": "all",
   },
 
   // hits
   "inlay_hints": {
-    "enabled": false
+    "enabled": false,
   },
 
   // hide collaboration panel
   "collaboration_panel": {
-    "button": false
+    "button": false,
   },
 
   // terminal
   "terminal": {
     "font_size": 16,
-    "line_height": "standard"
+    "line_height": "standard",
   },
 
   // debugger
@@ -203,15 +213,15 @@
     "stepping_granularity": "line",
     "save_breakpoints": true,
     "dock": "left",
-    "button": true
+    "button": true,
   },
 
   // telemetry
   "telemetry": {
     "diagnostics": false,
-    "metrics": false
+    "metrics": false,
   },
 
   // auto update
-  "auto_update": false
+  "auto_update": false,
 }
