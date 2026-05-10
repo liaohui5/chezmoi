@@ -1,10 +1,6 @@
 # alacritty
 # github: https://github.com/alacritty/alacritty
 # docs: https://alacritty.org/config-alacritty.html
-[terminal.shell]
-program = "/usr/local/bin/fish"
-args = ["--login"]
-
 [font]
 size = 18
 
