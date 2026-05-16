@@ -19,6 +19,13 @@ safe-alias 'ls' 'lsd'
 # chezmoi: https://github.com/twpayne/chezmoi
 safe-alias 'zmoi' 'chezmoi'
 
+# fastfetch
+# https://github.com/fastfetch-cli/fastfetch
+safe-alias 'ff' 'fastfetch'
+
+# lazygit: https://github.com/jesseduffield/lazygit
+safe-alias 'lg' 'lazygit'
+
 # static web server
 # https://github.com/vercel/serve
 # https://github.com/vitejs/vite
@@ -42,26 +49,28 @@ function sws() {
   fi
 }
 
-# fastfetch
-# https://github.com/fastfetch-cli/fastfetch
-safe-alias 'ff' 'fastfetch'
-
-# lazygit: https://github.com/jesseduffield/lazygit
-safe-alias 'lg' 'lazygit'
-
 # lazysql: https://github.com/jorgerojas26/lazysql
-safe-alias 'lzsql' 'lazysql'
-
-# safe remove files
-safe-alias 'rm' 'trash'
+# dbhub: https://github.com/danvergara/dblab
+function tuidbc() {
+  if has-command lazysql; then
+    lazysql
+  elif has-command dblab; then
+    dblab
+  elif has-command sqlit; then
+    sqlit
+  else
+    printf "not found tui databse client, please install one of the following:\n"
+    printf "\t https://github.com/jorgerojas26/lazysql\n"
+    printf "\t https://github.com/danvergara/dblab\n"
+    printf "\t https://github.com/Maxteabag/sqlit\n"
+  fi
+}
 
 # docker & compose
 # https://www.docker.com/
-safe-alias 'd' 'docker'
-if has-command 'docker-compose'; then
-  safe-alias 'dc' 'docker-compose'
-else
-  safe-alias 'dc' 'docker compose'
+if has-command 'docker'; then
+  alias d='docker'
+  alias dc='docker compose'
 fi
 
 # pnpm: https://pnpm.io/
