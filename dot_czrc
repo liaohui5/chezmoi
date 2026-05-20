@@ -3,7 +3,7 @@
 	"path": "cz-git",
 	"useAI": false,
 	"apiEndpoint": "https://integrate.api.nvidia.com/v1",
-	"apiModel": "deepseek-ai/deepseek-v4-flash",
+	"apiModel": "qwen/qwen3-next-80b-a3b-instruct",
 	"aiNumber": 6,
 	"useEmoji": true,
 	"emojiAlign": "left",
