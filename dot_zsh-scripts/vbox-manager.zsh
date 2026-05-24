@@ -9,24 +9,14 @@ safe-alias 'vbox' 'VBoxManage'
 # selected vm uuid
 vmid=""
 
-function check-commands() {
-  if ! has-command 'VBoxManage'; then
-    echo 'Error: Not found "VBoxManage" command' >&2
-    return 1
-  fi
-  if ! has-command 'fzf'; then
-    echo 'Error: Not found "fzf" command' >&2
-    return 1
-  fi
-}
-
+# pick vmid and set vmid variable
 function pick-vmid-use-fzf() {
   local prompt_title="$1"
   vmid=$(VBoxManage list vms | fzf --reverse --prompt="${prompt_title}> " | awk -F"[{}]" '{print $2}')
 }
 
+# start vm in background
 function vbox-start() {
-  check-commands
   pick-vmid-use-fzf "select vm to start on background"
   if [[ -z "$vmid" ]]; then
     echo "Error: No VM selected"
@@ -35,8 +25,8 @@ function vbox-start() {
   VBoxManage startvm "$vmid" --type=headless
 }
 
+# halt vm by vimid
 function vbox-stop() {
-  check-commands
   pick-vmid-use-fzf "select vm to stop"
   if [[ -z "$vmid" ]]; then
     echo "Error: No VM selected"
@@ -45,9 +35,8 @@ function vbox-stop() {
   VBoxManage controlvm "$vmid" poweroff
 }
 
+# make vm snapshot by vimid
 function vbox-snapshot() {
-  check-commands
-
   # select vm to make snapshot
   pick-vmid-use-fzf "select vm to make snapshot"
   if [[ -z "$vmid" ]]; then

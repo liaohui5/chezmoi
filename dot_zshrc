@@ -35,7 +35,7 @@ function safe-alias() {
   fi
 }
 
-# check file exists 
+# check file exists
 function file-exists() {
     if [[ -f "$1" ]]; then
         return 0
@@ -81,6 +81,10 @@ safe-source "$ZSH_SCRIPTS_DIR/ssh-manager.zsh"
 # load software specific zsh scripts
 if has-command VBoxManage; then
     safe-source "$ZSH_SCRIPTS_DIR/vbox-manager.zsh"
+fi
+
+if has-command vmrun; then
+    safe-source "$ZSH_SCRIPTS_DIR/vmware-manager.zsh"
 fi
 if has-command brew; then
     safe-source "$ZSH_SCRIPTS_DIR/homebrew.zsh"
