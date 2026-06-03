@@ -21,6 +21,7 @@ alt - 3: open -b "com.github.wez.wezterm"               # wezterm
 alt - 4: open -b "com.microsoft.VSCode"                 # vscode
 alt - 5: open -b "com.tencent.xinWeChat"                # wechat
 alt - 9: open -a "Launchpad"                            # macOS launchpad
-alt - 0: open -b "com.google.chrome"                    # Google Chrome
+alt - 0: open -b "org.chromium.Thorium"                 # Thorium(Chromium fork)
+# alt - 0: open -b "com.google.chrome"                    # Google Chrome
 # alt - 0: open -b "org.mozilla.firefox"                  # firefox
 

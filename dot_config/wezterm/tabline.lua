@@ -42,9 +42,15 @@ return {
           "index",
           { "process", padding = { left = 0, right = 1 } },
         },
-        tabline_x = {},
-        tabline_y = { "ram", "cpu", "domain" },
-        tabline_z = { "mode" },
+        tabline_x = {
+          {
+            "datetime",
+            style = "%Y-%m-%d",
+            icons_enabled = false,
+          },
+        },
+        tabline_y = { "ram", "cpu" },
+        tabline_z = { "domain" },
       },
     })
   end,
