@@ -82,7 +82,6 @@ safe-source "$ZSH_SCRIPTS_DIR/ssh-manager.zsh"
 if has-command VBoxManage; then
     safe-source "$ZSH_SCRIPTS_DIR/vbox-manager.zsh"
 fi
-
 if has-command vmrun; then
     safe-source "$ZSH_SCRIPTS_DIR/vmware-manager.zsh"
 fi
