@@ -9,7 +9,16 @@
 {
   // disable ai features
   // "disable_ai": true,
+  "agent_servers": {
+    "cline": {
+      "type": "registry"
+    },
+    "opencode": {
+      "type": "registry"
+    }
+  },
   "agent": {
+    "sidebar_side": "right",
     "dock": "right",
     "default_model": {
       "provider": "Nvidia",
