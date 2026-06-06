@@ -5,16 +5,13 @@ LICENSE
 .oxfmtrc.jsonc
 .editorconfig
 .gitignore
+~/.config/zed/prompts
 ~/.config/zed/prompts/*
-~/.vim/.netrwhist
+dot_config/zed/prompts/*
 ~/vim/plugged/*
 ~/vim/undo/*
-
-{{- if eq .chezmoi.os "darwin" }}
-~/.vim/.netrwhist
 ~/.vim/plugged
 ~/.vim/undo
-{{- end }}
 
 {{- if eq .chezmoi.os "windows" }}
 Documents/*
