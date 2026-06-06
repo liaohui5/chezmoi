@@ -67,4 +67,5 @@ fi
 if has-command 'pnpm'; then
   export PNPM_HOME="$HOME/.pnpm_store"
   append-path $PNPM_HOME
+  append-path "${PNPM_HOME}/bin"
 fi
