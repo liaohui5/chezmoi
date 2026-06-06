@@ -9,13 +9,14 @@
 {
   // disable ai features
   // "disable_ai": true,
+  "cli_default_open_behavior": "existing_window",
   "agent_servers": {
     "cline": {
-      "type": "registry"
+      "type": "registry",
     },
     "opencode": {
-      "type": "registry"
-    }
+      "type": "registry",
+    },
   },
   "agent": {
     "sidebar_side": "right",
@@ -110,6 +111,7 @@
   // panels
   "project_panel": {
     "dock": "left",
+    "auto_fold_dirs": false,
   },
   "outline_panel": {
     "dock": "left",
