@@ -1,50 +1,52 @@
-# This is a demo config to show some of the most important commands more easily.
-# This is meant to be changed and configured, as it is intentionally kept sparse.
-# For a more advanced configuration example see my dotfiles:
+# This is a demo config to showcase some of the most important commands.
+# It is meant to be changed and configured, as it is intentionally kept sparse.
+# For a (much) more advanced configuration example see my dotfiles:
 # https://github.com/FelixKratz/dotfiles
 
 PLUGIN_DIR="$CONFIG_DIR/plugins"
 
-FONT="Hack Nerd Font Mono:Regular"
-
 ##### Bar Appearance #####
-# Configuring the general appearance of the bar, these are only some of the
-# options available. For all options see:
+# Configuring the general appearance of the bar.
+# These are only some of the options available. For all options see:
 # https://felixkratz.github.io/SketchyBar/config/bar
 # If you are looking for other colors, see the color picker:
 # https://felixkratz.github.io/SketchyBar/config/tricks#color-picker
 
-sketchybar --bar height=25        \
-                 blur_radius=0    \
-                 position=bottom  \
-                 sticky=off       \
-                 padding_left=10  \
-                 padding_right=10 \
-                 color=0xdd000000
+bar_opts=(
+  position=bottom
+  height=25
+  blur_radius=30
+  sticky=off
+  color=0x40000000
+  padding_left=5
+  padding_right=5
+)
+
+sketchybar --bar "${bar_opts[@]}"
 
 ##### Changing Defaults #####
-# We now change some default values that are applied to all further items
+# We now change some default values, which are applied to all further items.
 # For a full list of all available item properties see:
 # https://felixkratz.github.io/SketchyBar/config/items
 
 default=(
   padding_left=5
   padding_right=5
-  icon.font="$FONT:16.0"
-  label.font="$FONT:14.0"
+  icon.font="Maple Mono NF CN:Regular:16.0"
+  label.font="Maple Mono NF CN:Regular:14.0"
   icon.color=0xffffffff
   label.color=0xffffffff
   icon.padding_left=4
   icon.padding_right=4
-  label.padding_left=4
-  label.padding_right=4
+  label.padding_left=5
+  label.padding_right=5
 )
 sketchybar --default "${default[@]}"
 
 ##### Adding Mission Control Space Indicators #####
-# Now we add some mission control spaces:
+# Let's add some mission control spaces:
 # https://felixkratz.github.io/SketchyBar/config/components#space----associate-mission-control-spaces-with-an-item
-# to indicate active and available mission control spaces
+# to indicate active and available mission control spaces.
 
 SPACE_ICONS=("1" "2" "3" "4" "5" "6" "7" "8" "9" "10")
 for i in "${!SPACE_ICONS[@]}"
@@ -66,7 +68,7 @@ do
 done
 
 ##### Adding Left Items #####
-# We add some regular items to the left side of the bar
+# We add some regular items to the left side of the bar, where
 # only the properties deviating from the current defaults need to be set
 
 sketchybar --add item chevron left \
@@ -95,8 +97,5 @@ sketchybar --add item clock right \
            --set battery update_freq=120 script="$PLUGIN_DIR/battery.sh" \
            --subscribe battery system_woke power_source_change
 
-##### Finalizing Setup #####
-# The below command is only needed at the end of the initial configuration to
-# force all scripts to run the first time, it should never be run in an item script.
-
+##### Force all scripts to run the first time (never do this in a script) #####
 sketchybar --update
