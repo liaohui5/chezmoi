@@ -6,6 +6,7 @@ LICENSE
 .editorconfig
 .gitignore
 ~/.config/zed/prompts/*
+~/.vim/.netrwhist
 ~/vim/plugged/*
 ~/vim/undo/*
 
