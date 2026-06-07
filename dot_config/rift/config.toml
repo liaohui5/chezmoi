@@ -1,6 +1,6 @@
 ########################################################################################
 # repo: https://github.com/acsandmann/rift
-# docs: 
+# docs:
 # rift config
 # Copy this file to ~/.config/rift/config.toml or $HOME~/.config/rift/config.toml
 
@@ -179,7 +179,7 @@ default_workspace_count = 5
 auto_assign_windows = true
 preserve_focus_per_workspace = true
 workspace_auto_back_and_forth = false
-reapply_app_rules_on_title_change = false
+reapply_app_rules_on_title_change = true
 
 # Workspace-specific rules
 # - workspace: target workspace by index (integer) or name (string)
@@ -264,7 +264,20 @@ workspace_names = []
 #       ]
 #
 # By default there are no app rules; add or uncomment rules below as needed.
-app_rules = []
+#
+#######################################################################################
+# *.app paths     : /Applications and /System/Applications
+# get app BundleId: mdls -name kMDItemCFBundleIdentifier /Applications/Safari.app
+app_rules = [
+  {app_id = "com.apple.finder",             floating = true},
+  {app_id = "com.apple.launchpad.launcher", floating = true},
+  {app_id = "com.aone.keka",                floating = true},
+  {app_id = "com.raycast.macos",            floating = true},
+  {app_id = "com.apple.systempreferences",  floating = true},
+  {app_id = "com.depthpicture.PixPin",      floating = true},
+  # {app_id = "com.kangfenmao.CherryStudio",  floating = true},
+  # {app_id = "xyz.chatboxapp.app",           floating = true},
+]
 
 # Modifier combinations that can be reused in key bindings
 # Define common modifier combinations to avoid repetition.
