@@ -17,7 +17,14 @@ alias ...='cd ../../'
 safe-alias 'ls' 'lsd'
 
 # chezmoi: https://github.com/twpayne/chezmoi
-safe-alias 'zmoi' 'chezmoi'
+# safe-alias 'moi' 'chezmoi'
+if has-command 'chezmoi'; then
+  alias zmoi='chezmoi'
+  alias zmoia='chezmoi apply'
+  alias zmoic='chezmoi cd'
+  alias zmoid='chezmoi diff'
+  alias zmoie="cd ${HOME}/.local/share/chezmoi && nvim ."
+fi
 
 # fastfetch
 # https://github.com/fastfetch-cli/fastfetch
