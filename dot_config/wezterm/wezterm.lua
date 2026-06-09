@@ -8,7 +8,7 @@ require("tabline").setup()
 
 -- font styles
 -- https://github.com/ryanoasis/nerd-fonts
-local fontSize = 18
+local fontSize = 16
 local font = wezterm.font_with_fallback({
   {
     family = "Maple Mono NF CN",
