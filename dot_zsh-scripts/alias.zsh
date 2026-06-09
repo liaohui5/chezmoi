@@ -16,6 +16,11 @@ alias ...='cd ../../'
 # lsd: https://github.com/Peltoche/lsd
 safe-alias 'ls' 'lsd'
 
+# rclone: https://rclone.org/
+if has-command 'rclone'; then
+  alias rcgui='rclone gui --user=1 --pass=1 --addr=http://localhost:9988'
+fi
+
 # chezmoi: https://github.com/twpayne/chezmoi
 # safe-alias 'moi' 'chezmoi'
 if has-command 'chezmoi'; then

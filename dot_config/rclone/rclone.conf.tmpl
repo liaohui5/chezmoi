@@ -1,0 +1,90 @@
+[cstcloud]
+type = s3
+provider = Other
+access_key_id = {{ .cstcloud_access_key_id }}
+secret_access_key = {{ .cstcloud_access_key_secret }}
+endpoint = s3.cstcloud.cn
+acl = private
+bucket_object_lock_enabled = true
+
+[idrive-e2]
+type = s3
+provider = IDrive
+access_key_id = {{ .idrive_e2_access_key_id }}
+secret_access_key = {{ .idrive_e2_access_key_secret }}
+acl = private
+bucket_object_lock_enabled = true
+endpoint = s3.ap-northeast-1.idrivee2.com
+
+[koofr]
+type = koofr
+provider = koofr
+user = {{ .koofr_user }}
+password = {{ .koofr_pass }}
+
+[aliyun-oss]
+type = s3
+acl = private
+storage_class = STANDARD
+bucket_object_lock_enabled = true
+provider = Alibaba
+access_key_id = {{ .aliyun_oss_access_key_id }}
+secret_access_key = {{ .aliyun_oss_access_key_secret }}
+endpoint = oss-cn-shenzhen.aliyuncs.com
+
+[mega-driver]
+type = mega
+user = {{ .mega_driver_user }}
+pass = {{ .mega_driver_pass }}
+session_id = {{ .mega_driver_session_id }}
+master_key = {{ .mega_driver_master_key }}
+
+[upcdn-oss]
+type = s3
+provider = Other
+endpoint = s3.api.upyun.com
+region = ap-east-1
+acl = private
+bucket_object_lock_enabled = true
+access_key_id = {{ .upcdn_oss_access_key_id }}
+secret_access_key = {{ .upcdn_oss_access_key_secret }}
+
+[pcloud-webdav]
+type = webdav
+vendor = other
+url = https://webdav.pcloud.com
+user = {{ .pcloud_webdav_user }}
+pass = {{ .pcloud_webdav_pass }}
+
+[open-drive]
+type = opendrive
+username = {{ .open_drive_user }}
+password = {{ .open_drive_pass }}
+
+[pikpak]
+type = pikpak
+user = {{ .pikpak_user }}
+pass = {{ .pikpak_pass }}
+device_id = {{ .pikpak_device_id }}
+captcha_token = {"captcha_token":"{{ .pikpak_captcha_token }}","expires_in":300,"expiry":"2026-06-09T21:15:41.832155+08:00"}
+token = {"access_token":"{{ .pikpak_access_token }}","token_type":"Bearer","refresh_token":"{{ .pikpak_refresh_token }}","expiry":"2026-06-09T23:10:39.903861+08:00","expires_in":7200}
+
+[imagekit]
+type = imagekit
+endpoint = https://ik.imagekit.io/secretx500
+public_key = {{ .imagekit_public_key }}
+private_key = {{ .imagekit_private_key }}
+
+[seafile-cloud]
+type = seafile
+url = https://cloud.seafile.com/
+user = {{ .seafile_cloud_user }}
+pass = {{ .seafile_cloud_pass }}
+
+[selfhosted-webdav]
+type = webdav
+user = {{ .selfhosted_webdav_user }}
+pass = {{ .selfhosted_webdav_pass }}
+url = https://webdav.liaohui5.cn
+vendor = other
+
