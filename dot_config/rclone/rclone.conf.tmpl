@@ -29,6 +29,13 @@ url = https://app.koofr.net/dav/Google Drive
 user = {{ .koofr_user }}
 vendor = other
 
+[koofr-onedriver]
+type = webdav
+url = https://app.koofr.net/dav/OneDrive
+vendor = other
+user = {{ .koofr_user }}
+pass = {{ .koofr_onedriver }}
+
 [aliyun-oss]
 type = s3
 acl = private
@@ -88,10 +95,66 @@ url = https://cloud.seafile.com/
 user = {{ .seafile_cloud_user }}
 pass = {{ .seafile_cloud_pass }}
 
+[huawei-cloud-obs]
+type = s3
+endpoint = obs.cn-south-1.myhuaweicloud.com
+acl = private
+bucket_object_lock_enabled = false
+provider = HuaweiOBS
+region = cn-south-1
+access_key_id = {{ .huawei_cloud_obs_access_key_id }}
+secret_access_key = {{ .huawei_cloud_obs_secret_access_key }}
+
+[hi168-cloud-oss]
+type = s3
+region =
+endpoint = https://s3.hi168.com
+acl = private
+bucket_object_lock_enabled = false
+provider = Other
+access_key_id = {{ .hi168cloud_access_key_id }}
+secret_access_key = {{ .hi168cloud_secret_access_key }}
+
+[railway-oss]
+type = s3
+provider = Other
+region = auto
+endpoint = https://t3.storageapi.dev
+location_constraint =
+acl = private
+access_key_id = {{ .railway_access_key_id }}
+secret_access_key =  {{ .railway_access_secret_access_key }}
+
+[bitiful-oss]
+type = s3
+bucket_object_lock_enabled = false
+provider = Other
+endpoint = https://s3.bitiful.net
+region = cn-east-1
+acl = private
+location_constraint = cn-east-1
+access_key_id = {{ .bitiful_access_key_id }}
+secret_access_key = {{ .bitiful_secret_access_key }}
+
+[oracle-oss]
+type = s3
+access_key_id = {{ .oracle_oss_access_key_id }}
+secret_access_key = {{ .oracle_oss_secret_access_key }}
+region =
+endpoint = https://nrfvqqzl7x1v.compat.objectstorage.ap-tokyo-1.oci.customer-oci.com
+acl = private
+provider = Other
+
+[oracle-webav]
+type = webdav
+vendor = other
+url = https://oraclewebdav.liaohui5.cn/
+user = {{ .oracle_webdav_user }}
+pass = {{ .oracle_webdav_pass }}
+
 [selfhosted-webdav]
 type = webdav
 user = {{ .selfhosted_webdav_user }}
 pass = {{ .selfhosted_webdav_pass }}
 url = https://webdav.liaohui5.cn
 vendor = other
-
