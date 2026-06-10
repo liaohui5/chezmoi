@@ -22,6 +22,13 @@ provider = koofr
 user = {{ .koofr_user }}
 password = {{ .koofr_pass }}
 
+[koofr-webdav-google-driver]
+type = webdav
+pass = {{ .koofr_google_drive_pass }}
+url = https://app.koofr.net/dav/Google Drive
+user = {{ .koofr_user }}
+vendor = other
+
 [aliyun-oss]
 type = s3
 acl = private
