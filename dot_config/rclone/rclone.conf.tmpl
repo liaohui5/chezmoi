@@ -145,6 +145,15 @@ endpoint = https://nrfvqqzl7x1v.compat.objectstorage.ap-tokyo-1.oci.customer-oci
 acl = private
 provider = Other
 
+[cloudflare-r2]
+type = s3
+endpoint = https://9cfadefd85d0b56b6a7c0363b4997888.r2.cloudflarestorage.com
+provider = Cloudflare
+access_key_id = {{ .cloudflare_r2_access_key_id }}
+secret_access_key = {{ .cloudflare_r2_secret_access_key }}
+env_auth = false
+acl = private
+
 [oracle-webav]
 type = webdav
 vendor = other
