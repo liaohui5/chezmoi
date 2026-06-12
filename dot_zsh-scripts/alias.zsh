@@ -18,8 +18,7 @@ safe-alias 'ls' 'lsd'
 
 # rclone: https://rclone.org/
 if has-command 'rclone'; then
-  alias rcgui='rclone gui --user=1 --pass=1 --addr=http://localhost:9988'
-  alias rcguid='rclone gui --user=1 --pass=1 --addr=http://localhost:9988 --no-open-browser & >> /dev/null'
+  alias rcgui='rclone gui --user=rclone --pass=rclone --addr=http://localhost:9988 --no-open-browser'
 fi
 
 # chezmoi: https://github.com/twpayne/chezmoi
