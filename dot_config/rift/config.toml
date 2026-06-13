@@ -278,6 +278,8 @@ app_rules = [
   {app_id = "com.kangfenmao.CherryStudio",  floating = true},
   {app_id = "xyz.chatboxapp.app",           floating = true},
   {app_id = "com.molunerfinn.picgo",        floating = true},
+  {app_id = "com.tencent.Lemon",            floating = true},
+  {app_id = "io.github.clash-verge-rev.clash-verge-rev", floating = true},
 ]
 
 # Modifier combinations that can be reused in key bindings
