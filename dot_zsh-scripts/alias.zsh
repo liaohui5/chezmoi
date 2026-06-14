@@ -16,6 +16,9 @@ alias ...='cd ../../'
 # lsd: https://github.com/Peltoche/lsd
 safe-alias 'ls' 'lsd'
 
+# neovim: https://github.com/neovim/neovim
+safe-alias 'v' 'nvim'
+
 # rclone: https://rclone.org/
 if has-command 'rclone'; then
   alias rcgui='rclone gui --user=rclone --pass=rclone --addr=http://127.0.0.1:9988 --no-open-browser'
