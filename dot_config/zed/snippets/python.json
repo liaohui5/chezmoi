@@ -1,0 +1,12 @@
+{
+  "define function": {
+    "prefix": "fn",
+    "body": ["def ${1:fn}():", "    pass", ""],
+    "description": "define a function"
+  },
+  "define async function": {
+    "prefix": "asfn",
+    "body": ["async def ${1:fn}():", "    pass", ""],
+    "description": "define async a function"
+  }
+}

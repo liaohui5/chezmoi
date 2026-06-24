@@ -38,5 +38,15 @@
       ""
     ],
     "description": "html base construct"
+  },
+  "script": {
+    "prefix": "script:mo",
+    "body": ["<script type=\"module\" src=\"${1}\"></script>"],
+    "description": "script"
+  },
+  "link": {
+    "prefix": "link",
+    "body": ["<link rel=\"stylesheet\" href=\"${1}\" /> "],
+    "description": "link"
   }
 }

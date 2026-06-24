@@ -86,5 +86,15 @@
       "<style lang=\"stylus\" scoped></style>"
     ],
     "description": "Base for Vue File with Stylus"
+  },
+  "script with typescript and setup": {
+    "prefix": "script:ts",
+    "body": ["<script lang=\"ts\" setup>", "${1}", "</script>", ""],
+    "description": "script with typescript and setup"
+  },
+  "script with setup": {
+    "prefix": "script:js",
+    "body": ["<script setup>", "${1}", "</script>", ""],
+    "description": "script with typescript and setup"
   }
 }

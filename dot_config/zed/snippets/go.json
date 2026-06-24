@@ -1,0 +1,12 @@
+{
+  "fmt.Println": {
+    "prefix": "fmtp",
+    "body": ["fmt.Println(\"$1\")"],
+    "description": "fmt.Println"
+  },
+  "if have error": {
+    "prefix": "iferr",
+    "body": ["if err := $1; err != nil {", "    $0", "}", ""],
+    "description": "if have error"
+  }
+}

@@ -19,7 +19,11 @@
         "path": "./vue.json"
       },
       {
-        "language": "json",
+        "language": [
+          "json",
+          "jsonc",
+          "json5"
+        ],
         "path": "./json.json"
       },
       {
@@ -37,6 +41,14 @@
       {
         "language": "editorconfig",
         "path": "./editorconfig.json"
+      },
+      {
+        "language": "python",
+        "path": "./python.json"
+      },
+      {
+        "language": "go",
+        "path": "./go.json"
       }
     ]
   }
