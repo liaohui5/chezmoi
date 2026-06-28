@@ -46,13 +46,6 @@ access_key_id = {{ .aliyun_oss_access_key_id }}
 secret_access_key = {{ .aliyun_oss_access_key_secret }}
 endpoint = oss-cn-shenzhen.aliyuncs.com
 
-[mega-driver]
-type = mega
-user = {{ .mega_driver_user }}
-pass = {{ .mega_driver_pass }}
-session_id = {{ .mega_driver_session_id }}
-master_key = {{ .mega_driver_master_key }}
-
 [upcdn-oss]
 type = s3
 provider = Other
@@ -153,6 +146,129 @@ access_key_id = {{ .cloudflare_r2_access_key_id }}
 secret_access_key = {{ .cloudflare_r2_secret_access_key }}
 env_auth = false
 acl = private
+
+[1Fichier]
+type = fichier
+api_key = {{ ._1fichier_api_key }}
+
+[mega-secretx500-88com]
+type = mega
+user = secretx500@88.com
+pass = hSG8B-DI7cHaVNCiFGLnuOHy9-R60dSyT4dts6-yEg
+session_id = daxTVKj13Z6ZXKWwy0m9l3BTQmVwcU5pMmpzZbj6kqNtp8_Qh4HRBcwUEA
+master_key = HWtmxCqxJb8GC2el2dvgcg==
+
+[mega-secretx500-outlook]
+type = mega
+user = secretx500@outlook.com
+pass = 0XHzUnqXqQsl4Hprb4psBCG5NvCigxJlGa94gvxraw
+session_id = x2amM3CGqjXdxh240yFTx0hPMDV4VnZxN0g0HoVFWWLC_VHgMICnA1gW9A
+master_key = iiwN/1L8giuwBLZiyKX06Q==
+
+[mega-secretx500-gamil]
+type = mega
+user = {{ .mega_driver_user3 }}
+pass = {{ .mega_driver_pass3 }}
+session_id = {{ .mega_driver_session_id3 }}
+master_key =  {{ .mega_driver_master_key3 }}
+
+[mega-secretx500-111com]
+type = mega
+user = {{ .mega_driver_user4 }}
+pass = {{ .mega_driver_pass4 }}
+session_id = {{ .mega_driver_session_id4 }}
+master_key = {{ .mega_driver_master_key4 }}
+
+[cloudinary-gmail]
+type = cloudinary
+cloud_name = dw7kjkhjt
+api_key = {{ .cloudinary_gmail_api_key }}
+api_secret = {{ .cloudinary_gmail_api_secret }}
+upload_prefix = https://api-ap.cloudinary.com/v1_1/
+
+[cloudinary-github-liaohui6]
+type = cloudinary
+cloud_name = dtrz2f8vo
+upload_prefix = https://api-ap.cloudinary.com/v1_1/
+api_key = {{ .cloudinary_gh_liaohui6_api_key }}
+api_secret = {{ .cloudinary_gh_liaohui6_api_secret }}
+
+[cloudinary-github-liaohui5]
+type = cloudinary
+cloud_name = dvstmpl9g
+upload_prefix = https://api-ap.cloudinary.com/v1_1/
+api_secret = {{ .cloudinary_gh_liaohui5_api_secret }}
+api_key = {{ .cloudinary_gh_liaohui5_api_key }}
+
+[cloudinary-github-secretx500]
+type = cloudinary
+cloud_name = ds52ol32a
+upload_prefix = https://api-ap.cloudinary.com/v1_1/
+api_key = {{ .cloudinary_gh_secretx500_api_key }}
+api_secret = {{ .cloudinary_gh_secretx500_api_secret }}
+
+[cloudinary-secretx500-88com]
+type = cloudinary
+upload_prefix = https://api-ap.cloudinary.com/v1_1/
+cloud_name = cmabyrz1
+api_key = {{ .cloudinary_88com_api_key}}
+api_secret = {{ .cloudinary_88com_api_secret }}
+
+[cloudinary-secretx500-111com]
+type = cloudinary
+cloud_name = vv4ckwv9
+upload_prefix = https://api-ap.cloudinary.com/v1_1/
+api_key = {{ .cloudinary_111com_api_key }}
+api_secret = {{ .cloudinary_111com_api_secret }}
+
+[cloudinary-secretx500-emailcn]
+type = cloudinary
+cloud_name = ijmufg3r
+upload_prefix = https://api-ap.cloudinary.com/v1_1/
+api_key = {{ .cloudinary_emailcn_api_key }}
+api_secret = {{ .cloudinary_emailcn_api_secret }}
+
+[cloudinary-secretx500-qqcom]
+type = cloudinary
+cloud_name = iqx9hiww
+upload_prefix = https://api-ap.cloudinary.com/v1_1/
+api_key = {{ .cloudinary_qqcom_api_key }}
+api_secret = {{ .cloudinary_qqcom_api_secret }}
+
+[cloudinary-secretx5000-qqcom]
+type = cloudinary
+cloud_name = uirdqkqp
+upload_prefix = https://api-ap.cloudinary.com/v1_1/
+api_key = {{ .cloudinary_qqcom2_api_key }}
+api_secret = {{ .cloudinary_qqcom2_api_secret }}
+
+[cloudinary-liaohui5-aliyuncom]
+type = cloudinary
+cloud_name = uw742hjh
+upload_prefix = https://api-ap.cloudinary.com/v1_1/
+api_key = {{ .cloudinary_aliyun_api_key }}
+api_secret = {{ .cloudinary_aliyun_api_secret }}
+
+[cloudinary-secretx500-aliyuncom]
+type = cloudinary
+cloud_name = l7he1t3c
+upload_prefix = https://api-ap.cloudinary.com/v1_1/
+api_key = {{ .cloudinary_aliyun2_api_key }}
+api_secret = {{ .cloudinary_aliyun2_api_secret }}
+
+[cloudinary-secretx500-sinacom]
+type = cloudinary
+cloud_name = qhospfle
+upload_prefix = https://api-ap.cloudinary.com/v1_1/
+api_key = {{ .cloudinary_sina_api_key }}
+api_secret = {{ .cloudinary_sina_api_secret }}
+
+[123netdisk-webdav]
+type = webdav
+url = https://webdav.123pan.cn/webdav
+vendor = other
+user = {{ ._123netdisk_webdav_user }}
+pass = {{ ._123netdisk_webdav_pass }}
 
 [oracle-webav]
 type = webdav
