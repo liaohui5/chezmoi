@@ -40,7 +40,7 @@ mouse_hides_on_focus = false
 auto_focus_blacklist = [
   "com.raycast.macos",
   "com.apple.systemuiserver",
-  "com.apple.Spotlight"
+  "com.apple.Spotlight",
 ]
 
 # Run commands on start
@@ -77,7 +77,7 @@ mode = "scrolling"
 column_width_ratio = 0.65
 min_column_width_ratio = 0.35
 max_column_width_ratio = 0.95
-alignment = "center" # "left", "center", "right"
+alignment = "center"            # "left", "center", "right"
 focus_navigation_style = "niri"
 animate = false
 
@@ -269,17 +269,22 @@ workspace_names = []
 # *.app paths     : /Applications and /System/Applications
 # get app BundleId: mdls -name kMDItemCFBundleIdentifier /Applications/Safari.app
 app_rules = [
-  {app_id = "com.apple.finder",             floating = true},
-  {app_id = "com.apple.launchpad.launcher", floating = true},
-  {app_id = "com.aone.keka",                floating = true},
-  {app_id = "com.raycast.macos",            floating = true},
-  {app_id = "com.apple.systempreferences",  floating = true},
-  {app_id = "com.depthpicture.PixPin",      floating = true},
-  {app_id = "com.kangfenmao.CherryStudio",  floating = true},
-  {app_id = "xyz.chatboxapp.app",           floating = true},
-  {app_id = "com.molunerfinn.picgo",        floating = true},
-  {app_id = "com.tencent.Lemon",            floating = true},
-  {app_id = "io.github.clash-verge-rev.clash-verge-rev", floating = true},
+  { app_id = "com.apple.finder", floating = true },
+  { app_id = "com.apple.launchpad.launcher", floating = true },
+  { app_id = "com.aone.keka", floating = true },
+  { app_id = "com.raycast.macos", floating = true },
+  { app_id = "com.apple.systempreferences", floating = true },
+  { app_id = "com.depthpicture.PixPin", floating = true },
+  { app_id = "com.kangfenmao.CherryStudio", floating = true },
+  { app_id = "xyz.chatboxapp.app", floating = true },
+  { app_id = "com.molunerfinn.picgo", floating = true },
+  { app_id = "com.tencent.Lemon", floating = true },
+  { app_id = "io.github.clash-verge-rev.clash-verge-rev", floating = true },
+  { app_id = "com.vmware.fusion", floating = true },
+  { app_id = "com.lobehub.lobehub-desktop", floating = true },
+  { app_id = "com.depthpicture.PixPin", floating = true },
+  { app_id = "com.colliderli.iina", floating = true },
+  { app_id = "ch.sudo.cyberduck", floating = true },
 ]
 
 # Modifier combinations that can be reused in key bindings
@@ -289,7 +294,7 @@ app_rules = [
 [modifier_combinations]
 AltShift = "Alt + Shift"
 CmdShift = "Meta + Shift"
-CtrlAlt  = "Ctrl + Alt"
+CtrlAlt = "Ctrl + Alt"
 
 [keys]
 # Key binding syntax
@@ -376,8 +381,8 @@ CtrlAlt  = "Ctrl + Alt"
 # resize windows
 "AltShift + Equal" = "resize_window_grow"
 "AltShift + Minus" = "resize_window_shrink"
-"CtrlAlt + H"  = "resize_window_shrink"
-"CtrlAlt + L"  = "resize_window_grow"
+"CtrlAlt + H" = "resize_window_shrink"
+"CtrlAlt + L" = "resize_window_grow"
 
 # toggle service active
 "Alt + Z" = "toggle_space_activated"
