@@ -1,12 +1,12 @@
 #!/usr/bin/env zsh
 #######################################################################
 ## ssh connection manager
-## sshs: https://github.com/quantumsheep/sshs
+## tssh: https://github.com/trzsz/trzsz-ssh
 #######################################################################
 function sshmgr() {
   # if sshs command exists, use it
-  if has-command 'sshs'; then
-    sshs
+  if has-command 'tssh'; then
+    tssh
     return 0
   fi
 
