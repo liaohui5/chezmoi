@@ -16,10 +16,11 @@
 # show app BundleId    : mdls -name kMDItemCFBundleIdentifier /Applications/Safari.app
 # show skhd keybindings: skhd -o
 alt - 1: open -b "com.apple.finder"                     # Finder
-alt - 2: open -b "org.mozilla.thunderbird"              # Thunderbird
-alt - 3: open -b "com.github.wez.wezterm"               # wezterm
-alt - 4: open -b "com.microsoft.VSCode"                 # vscode
+alt - 2: open -b "org.alacritty" --args -e yazi ~       # open alacritty and execute yazi command
+alt - 3: open -b "net.kovidgoyal.kitty"                 # kitty
+alt - 4: open -b "org.alacritty" --args -e aerc         # open alacritty and execute aerc command
 alt - 5: open -b "com.tencent.xinWeChat"                # wechat
+alt - 6: open -b "com.tencent.qq"                       # qq
 alt - 9: open -a "Launchpad"                            # macOS launchpad
 alt - 0: open -b "org.chromium.Thorium"                 # Thorium(Chromium fork)
 # alt - 0: open -b "com.google.chrome"                    # Google Chrome
