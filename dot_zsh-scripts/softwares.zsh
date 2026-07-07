@@ -10,6 +10,12 @@ else
   export EDITOR='vi'
 fi
 
+# homebrew
+# https://brew.sh/
+if has-command 'brew'; then
+  append-path "/usr/local/sbin"
+fi
+
 # zoxide
 # https://github.com/ajeetdsouza/zoxide
 if has-command 'zoxide'; then
