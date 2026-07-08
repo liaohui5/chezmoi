@@ -13,7 +13,8 @@ fi
 # homebrew
 # https://brew.sh/
 if has-command 'brew'; then
-  append-path "/usr/local/sbin"
+  # ensure brew sbin path is before then /usr/bin
+  export PATH="/usr/local/bin:$PATH"
 fi
 
 # zoxide
@@ -65,7 +66,7 @@ fi
 # uv
 # https://docs.astral.sh/uv/getting-started
 if has-command 'uv'; then
-  export PATH="$HOME/.local/bin:$PATH"
+  append-path "$HOME/.local/bin"
 fi
 
 # pnpm

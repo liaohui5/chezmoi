@@ -18,7 +18,7 @@
 alt - 1: open -b "com.apple.finder"                     # Finder
 alt - 2: open -b "org.alacritty" --args -e yazi ~       # open alacritty and execute yazi command
 alt - 3: open -b "com.github.wez.wezterm"               # wezterm
-alt - 4: open -b "org.mozilla.thunderbird"              # open thunderbird
+alt - 4: open -b "net.kovidgoyal.kitty"                 # open kitty
 alt - 5: open -b "com.tencent.xinWeChat"                # wechat
 alt - 6: open -b "com.tencent.qq"                       # qq
 alt - 7: open -b "org.alacritty" --args -e zellij       # Alacritty & zellij
