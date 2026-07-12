@@ -3,9 +3,6 @@
 # alais
 alias vbox-ls='VBoxManage list runningvms'
 
-# safe alias
-safe-alias 'vbox' 'VBoxManage'
-
 # selected vm uuid
 vmid=""
 

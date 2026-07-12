@@ -4,7 +4,7 @@ VMWARE_VM_DIR="$HOME/.vbox"
 VMWARE_VM_EXT=".vmwarevm"
 
 # alias
-alias vmware-ls='vmrun list'
+alias vmls='vmrun list'
 
 # selected vm .vmx path
 vmx_path=""
@@ -43,7 +43,7 @@ function vm-stop() {
 }
 
 # make vm snapshot by vmx_path
-function vmware-snapshot() {
+function vm-snapshot() {
   pick-vmx-use-fzf "select vm to make snapshot"
   if [[ -z "$vmx_path" ]]; then
     echo "Error: No VM selected"
