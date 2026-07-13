@@ -2,6 +2,8 @@
 ################################################################
 # define helper functions
 ################################################################
+# ~/.zsh-scripts
+ZSH_SCRIPTS_DIR="$HOME/.zsh-scripts"
 
 # MacOS language locale
 export LANG="en_US.UTF-8"
@@ -155,7 +157,6 @@ fi
 # load zsh scripts
 ################################################################
 # zsh scripts saved directory
-ZSH_SCRIPTS_DIR="$HOME/.zsh-scripts"
 safe-source "$HOME/.zprofile"
 safe-source "$ZSH_SCRIPTS_DIR/alias.zsh"
 safe-source "$ZSH_SCRIPTS_DIR/proxy.zsh"
