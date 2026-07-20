@@ -39,8 +39,7 @@ if has-command 'chezmoi'; then
   alias zmoie="cd ${HOME}/.local/share/chezmoi && nvim ."
 fi
 
-# fastfetch
-# https://github.com/fastfetch-cli/fastfetch
+# fastfetch: https://github.com/fastfetch-cli/fastfetch
 safe-alias 'ff' 'fastfetch'
 
 # lazygit: https://github.com/jesseduffield/lazygit
@@ -70,8 +69,9 @@ function sws() {
 }
 
 # lazysql: https://github.com/jorgerojas26/lazysql
-# dbhub: https://github.com/danvergara/dblab
-function tuidbc() {
+# dblab: https://github.com/danvergara/dblab
+# sqlit: https://github.com/Maxteabag/sqlit
+function dbtui() {
   if has-command lazysql; then
     lazysql
   elif has-command dblab; then
