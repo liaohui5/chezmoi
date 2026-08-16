@@ -106,6 +106,7 @@ if has-command 'pnpm'; then
   alias pt='pnpm run test'
   alias pb='pnpm run build'
   alias pm='pnpm run mock'
+  alias dshweb='pnpx @deepseek-ai/dsh web'
 fi
 
 # bun: https://bun.sh/
@@ -115,15 +116,6 @@ if has-command 'bun'; then
   alias bt='bun run test'
   alias bb='bun run build'
   alias bm='bun run mock'
-fi
-
-# https://github.com/denoland/deno
-if has-command 'deno'; then
-  alias dd='deno run dev'
-  alias ds='deno run start'
-  alias dt='deno run test'
-  alias db='deno run build'
-  alias dm='deno run mock'
 fi
 
 # cargo: https://rustwiki.org/zh-CN/cargo/
