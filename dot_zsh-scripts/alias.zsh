@@ -21,11 +21,12 @@ safe-alias 'v' 'nvim'
 
 # rclone: https://rclone.org/
 if has-command 'rclone'; then
-  alias rcgui='rclone gui --user=rclone --pass=rclone --addr=http://127.0.0.1:9988 --no-open-browser'
+  local rcgui='rclone gui --user=admin --pass=admin --addr=http://127.0.0.1:9988 --no-open-browser --api-addr=http://127.0.0.1:9989'
+  alias rcgui=eval $rcgui
 
   # must be has-command rclone and pmc
   if has-command 'pmc'; then
-    alias rcguid='pmc start "rclone gui --user=rclone --pass=rclone --addr=http://127.0.0.1:9988 --no-open-browser"'
+    alias rcguid="pmc start '${rcgui}'"
   fi
 fi
 
