@@ -96,17 +96,17 @@ fi
 
 # pnpm: https://pnpm.io/
 if has-command 'pnpm'; then
-  alias pi='pnpm install'
-  alias pa='pnpm approve-builds'
+  alias pii='pnpm install'
+  alias pa='pnpm add'
   alias pr='pnpm remove'
   alias pu='pnpm update'
+  alias pA='pnpm approve-builds'
   alias pU='pnpm self-update'
   alias pd='pnpm run dev'
   alias ps='pnpm run start'
   alias pt='pnpm run test'
   alias pb='pnpm run build'
   alias pm='pnpm run mock'
-  alias dshweb='pnpx @deepseek-ai/dsh web'
 fi
 
 # bun: https://bun.sh/
