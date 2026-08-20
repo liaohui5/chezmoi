@@ -25,20 +25,35 @@ customCommands:
     context: "global"
     command: "open -u 'https://github.com/jesseduffield/lazygit/blob/master/docs/keybindings/Keybindings_zh-CN.md'"
 
-  # 集成 czg 命令, 生成符合规范的提交信息
-  # 注意需要安装命令 npm i -g czg
-  # docs: https://cz-git.qbb.sh/zh/
+  # 集成 git-cz-ai 命令, 使用AI快速生成提交模板
+  # 注意需要先配置请求 api 需要的相关信息
+  # docs: https://github.com/liaohui5/git-cz-ai
   - key: "<c-c>"
     description: "Generate commit use czg"
     context: "files"
-    command: "czg"
+    command: "git-cz"
     output: terminal
+
+  - key: "<c-e>"
+    description: "Generate commits using ai"
+    command: "git-cz ai"
+    context: "files"
+    output: terminal
+
+  # 集成 czg 命令, 生成符合规范的提交信息
+  # 注意需要安装命令 npm i -g czg
+  # docs: https://cz-git.qbb.sh/zh/
+  # - key: "<c-c>"
+  #   description: "Generate commit use czg"
+  #   context: "files"
+  #   command: "git-cz"
+  #   output: terminal
 
   # 集成 czg ai 命令, 使用AI快速生成提交模板
   # 注意需要先配置请求 api 需要的相关信息
   # docs: https://cz-git.qbb.sh/zh/cli/ai
-  - key: "<c-e>"
-    description: "Generate commit using ai"
-    command: "czg ai -N=4"
-    context: "files"
-    output: terminal
+  # - key: "<c-e>"
+  #   description: "Generate commit using ai"
+  #   command: "czg ai -N=4"
+  #   context: "files"
+  #   output: terminal
