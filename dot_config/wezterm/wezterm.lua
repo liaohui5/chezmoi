@@ -34,6 +34,8 @@ return {
   window_frame = { font = font, font_size = fontSize },
   enable_scroll_bar = false,
   window_padding = { left = 0, right = 0, top = 0, bottom = 0 },
+  default_cursor_style = "BlinkingBar",
+  cursor_blink_rate = 500,
   colors = {
     cursor_bg = "#fbbc07",
     cursor_border = "#fbbc07",
