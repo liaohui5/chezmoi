@@ -25,6 +25,14 @@ customCommands:
     context: "global"
     command: "open -u 'https://github.com/jesseduffield/lazygit/blob/master/docs/keybindings/Keybindings_zh-CN.md'"
 
+  # 集成 gitswitch 命令, 用于切换提交用户
+  # docs: https://github.com/aksisonline/gitswitch
+  - key: "<c-u>"
+    description: "Switch git user config"
+    command: "gitswitch"
+    context: "files"
+    output: terminal
+
   # 集成 git-cz-ai 命令, 使用AI快速生成提交模板
   # 注意需要先配置请求 api 需要的相关信息
   # docs: https://github.com/liaohui5/git-cz-ai
