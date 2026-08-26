@@ -1,27 +1,38 @@
 #!/usr/bin/env zsh
 ################################################################
-# zimfw
+# load zimfw if exists
 ################################################################
-if [[ -d "${HOME}/.zim" ]]; then
+ZIM_HOME="${HOME}/.zim"
+## auto download zimfw if missing
+# if [[ ! -e \${ZIM_HOME}/zimfw.zsh ]]; then
+#   if (( \${+commands[curl]} )); then
+#     curl -fsSL --create-dirs -o \${ZIM_HOME}/zimfw.zsh \\
+#         https://github.com/zimfw/zimfw/releases/latest/download/zimfw.zsh
+#   else
+#     mkdir -p \${ZIM_HOME} && wget -nv -O \${ZIM_HOME}/zimfw.zsh \\
+#         https://github.com/zimfw/zimfw/releases/latest/download/zimfw.zsh
+#   fi
+# fi
+if [[ -d "${ZIM_HOME}" ]]; then
+  # set zsh options
   setopt HIST_IGNORE_ALL_DUPS
-  bindkey -e
+
+  # set keybindings
+  bindkey -v
+
+  # set wordchars options
   WORDCHARS=${WORDCHARS//[\/]}
+
+  # plugin settings
   ZSH_AUTOSUGGEST_MANUAL_REBIND=1
   ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 
-  ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
-  if [[ ! -e ${ZIM_HOME}/zimfw.zsh ]]; then
-    if (( ${+commands[curl]} )); then
-      curl -fsSL --create-dirs -o ${ZIM_HOME}/zimfw.zsh \
-          https://github.com/zimfw/zimfw/releases/latest/download/zimfw.zsh
-    else
-      mkdir -p ${ZIM_HOME} && wget -nv -O ${ZIM_HOME}/zimfw.zsh \
-          https://github.com/zimfw/zimfw/releases/latest/download/zimfw.zsh
-    fi
-  fi
+  # init zimfw
   if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZIM_CONFIG_FILE:-${ZDOTDIR:-${HOME}}/.zimrc} ]]; then
     source ${ZIM_HOME}/zimfw.zsh init
   fi
+
+  # load zimfw
   source ${ZIM_HOME}/init.zsh
 fi
 
