@@ -9,7 +9,7 @@ gui:
   sidePanelWidth: 0.5
   showRandomTip: false
   border: single
-  showIcons: true
+  showIcons: false
   showFileIcons: true
   commitHashLength: 6
 git:
